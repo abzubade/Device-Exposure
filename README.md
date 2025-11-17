@@ -1,4 +1,4 @@
-# ⚠️🌐 Device Exposure To the Internet
+# ⚠️🌐 Threat Hunting - Device Exposure To the Internet
 ---
 ## :bookmark_tabs: Scenario
 
@@ -36,7 +36,7 @@ There were zero (0) failed logons for the labuser account, indicating that a bru
 
 Though the device was exposed to the internet and clear brute force attempts have taken place, there is no evidence of any brute force success or unauthorized access from the legitimate account 'zubadmin'
 
-## Relevant MITRE ATT&CK TTPs
+### Relevant MITRE ATT&CK TTPs
 
 - T1110 – Brute Force
     Multiple rapid authentication attempts indicate brute-force guessing.
@@ -50,8 +50,10 @@ Though the device was exposed to the internet and clear brute force attempts hav
 - T1078 – Valid Accounts
     Attackers tried to authenticate using legitimate account names but did not succeed.
 
-
-
+### Response Actions
+1. Hardened the NSG attached to windows-target-1 to allow only RDP traffic from specific endpoints (no internet access)
+Implemented internet access
+2. Implemented Account Lockout Policy 
 
 
 
